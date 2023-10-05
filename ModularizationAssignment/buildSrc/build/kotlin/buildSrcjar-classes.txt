@@ -1,0 +1,1 @@
+/Users/pan/dev/Modularization/buildSrc/build/classes/kotlin/main/DaggerHilt.class:/Users/pan/dev/Modularization/buildSrc/build/classes/kotlin/main/Dependencies.class:/Users/pan/dev/Modularization/buildSrc/build/classes/kotlin/main/Version.class
