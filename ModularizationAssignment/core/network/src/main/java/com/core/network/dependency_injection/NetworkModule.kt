@@ -2,6 +2,7 @@ package com.core.network.dependency_injection
 
 import com.core.network.ApiService
 import com.core.network.dataproviders.YGODataProviders
+import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
@@ -10,6 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.create
 
 @InstallIn(SingletonComponent::class)
+@Module
 object NetworkModule {
 
     @Provides
