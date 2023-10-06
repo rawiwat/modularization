@@ -8,9 +8,8 @@ import javax.inject.Inject
 
 class YGORepositoryImplementation @Inject constructor(
     private val ygoDataProviders: YGODataProviders
-)
-    : YGORepository {
-    override suspend fun getAllYGOCards(): List<YGOCardImage> {
-        return ygoDataProviders.getAllYGOCards().toYGOCardImage()
+) : YGORepository {
+    override suspend fun getYGOCards(name: String): List<YGOCardImage> {
+        return ygoDataProviders.getYGOCards(name).toYGOCardImage()
     }
 }

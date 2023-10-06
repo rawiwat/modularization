@@ -12,9 +12,9 @@ import javax.inject.Inject
 class GetYGOListUseCase @Inject constructor(
     private val ygoRepository: YGORepository
 ) {
-    operator fun invoke() = flow<UiEvent<List<YGOCardImage>>> {
+    operator fun invoke(name: String) = flow<UiEvent<List<YGOCardImage>>> {
         emit(UiEvent.Loading())
-        emit(UiEvent.Success(ygoRepository.getAllYGOCards()))
+        emit(UiEvent.Success(ygoRepository.getYGOCards(name = name)))
     }.catch {
         emit(UiEvent.Error(it.message.toString()))
     }.flowOn(Dispatchers.IO)

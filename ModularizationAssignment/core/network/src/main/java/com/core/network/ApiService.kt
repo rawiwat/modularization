@@ -2,6 +2,7 @@ package com.core.network
 
 import com.core.network.model.YGOCards
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface ApiService {
 
@@ -9,5 +10,7 @@ interface ApiService {
     //https://db.ygoprodeck.com/api/v7/cardinfo.php
 
     @GET("cardinfo.php")
-    suspend fun getAllYGOCard():YGOCards
+    suspend fun getYGOCards(
+        @Query("fname") name: String
+    ):YGOCards
 }
