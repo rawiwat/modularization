@@ -37,9 +37,7 @@ import com.feature.movie.domain.model.YGOCardImage
 fun YGOCardScreen(viewModel: YGOCardSearchViewModel) {
     val result = viewModel.ygoCardList.value
     val query = viewModel.query.collectAsState()
-    val screenWidth = LocalConfiguration.current.screenWidthDp
-    val cardWidth = screenWidth - 5
-    val cardHeight = cardWidth * 3.25 / 2.25
+
     Scaffold(
         topBar = {
             TextField(

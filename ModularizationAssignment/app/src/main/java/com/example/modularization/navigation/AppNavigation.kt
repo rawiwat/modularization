@@ -17,5 +17,8 @@ fun AppNavGraph(
         navigationProvider.ygoApi.registerGraph(
             navController,this
         )
+        navigationProvider.ygoCardDetailApi.registerGraph(
+            navController,this
+        )
     }
 }
