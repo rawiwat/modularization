@@ -50,7 +50,6 @@ android {
 }
 
 dependencies {
-
     implementation(Dependencies.core)
     implementation(Dependencies.lifeCycleRuntime)
     implementation(Dependencies.composeActivity)

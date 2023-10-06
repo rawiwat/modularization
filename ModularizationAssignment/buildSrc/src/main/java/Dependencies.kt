@@ -21,7 +21,7 @@ object Dependencies {
     const val composePreview = "androidx.compose.ui:ui-tooling-preview"
     const val composeMaterial3 = "androidx.compose.material3:material3"
     const val junit = "junit:junit:${Version.junit}"
-    const val extJunit = "androidx.test.ext:junit${Version.extJunit}"
+    const val extJunit = "androidx.test.ext:junit:${Version.extJunit}"
     const val espressoCore = "androidx.test.espresso:espresso-core:${Version.espressoCore}"
     const val junitTest = "androidx.compose.ui:ui-test-junit4"
     const val composeUiTooling= "androidx.compose.ui:ui-tooling"
