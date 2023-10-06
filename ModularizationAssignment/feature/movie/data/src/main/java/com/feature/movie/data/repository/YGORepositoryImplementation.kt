@@ -12,4 +12,5 @@ class YGORepositoryImplementation @Inject constructor(
     override suspend fun getYGOCards(name: String): List<YGOCardImage> {
         return ygoDataProviders.getYGOCards(name).toYGOCardImage()
     }
+
 }
