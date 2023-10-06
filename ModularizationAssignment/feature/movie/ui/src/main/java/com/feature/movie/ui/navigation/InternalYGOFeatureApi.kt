@@ -4,18 +4,19 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
+import com.core.common.navigation_constant.YGOFeature
 import com.core.feature_api.FeatureApi
 
-object InternalYGOFeatureApi: FeatureApi {
+internal object InternalYGOFeatureApi: FeatureApi {
     override fun registerGraph(
         navController: NavController,
         navGraphBuilder: NavGraphBuilder
     ) {
         navGraphBuilder.navigation(
-            startDestination = "home",
-            route = "ygo_nested_navigation"
+            startDestination = YGOFeature.ygoScreenRoute,
+            route = YGOFeature.nestedRoute
         ) {
-            composable("home") {
+            composable(YGOFeature.ygoScreenRoute) {
             }
         }
     }

@@ -7,12 +7,12 @@ plugins {
 
 android {
     namespace = "com.example.modularization"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.modularization"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 
@@ -53,6 +53,8 @@ android {
 
 dependencies {
     implementation(project(":feature:movie:ui"))
+    implementation(project(":core:common"))
+    implementation(project(":core:feature_api"))
     implementation(Dependencies.core)
     implementation(Dependencies.lifeCycleRuntime)
     implementation(Dependencies.composeActivity)
@@ -71,4 +73,7 @@ dependencies {
 
     implementation("com.google.dagger:hilt-android:2.47")
     kapt("com.google.dagger:hilt-android-compiler:2.44")
+
+    implementation("androidx.navigation:navigation-compose:2.7.4")
+
 }
